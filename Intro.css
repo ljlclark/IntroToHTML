@@ -11,8 +11,8 @@
 .button {
   display: inline-block;
   background: lightsteelblue;
-  border-radius: 4px;
-  padding: 5px;
+  border-radius: 3px;
+  padding: 5px 5px 5px 5px;
   text-decoration: none;
 }
 
@@ -22,5 +22,9 @@ div.PathText {
   font-size: 9pt;
   padding-left: 10px;
   padding-top: 5px;
+}
+
+.button:hover {
+  background-color: #85C1E9;
 }
 
