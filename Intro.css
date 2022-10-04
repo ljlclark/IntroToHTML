@@ -1,5 +1,9 @@
 /* Intro.css */
 
+body {
+  background: aliceblue;
+}
+
 #title {
   background: lightsteelblue;
 }
