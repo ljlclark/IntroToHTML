@@ -4,14 +4,6 @@ body {
   background: aliceblue;
 }
 
-#title {
-  background: lightsteelblue;
-}
-
-.navigation {
-  background: lightsteelblue;
-}
-
 .button {
   display: inline-block;
   background: lightsteelblue;
@@ -20,7 +12,16 @@ body {
   text-decoration: none;
 }
 
-div.PathText {
+.navigation {
+  background: lightsteelblue;
+}
+
+.page {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.PathText {
   color: #003399;
   font-family: Verdana, Tahoma, Arial, Sans-Serif;
   font-size: 9pt;
@@ -32,3 +33,6 @@ div.PathText {
   background-color: #85C1E9;
 }
 
+#pageTitle {
+  background: lightsteelblue;
+}
