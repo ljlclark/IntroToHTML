@@ -12,6 +12,13 @@ body {
   text-decoration: none;
 }
 
+.demo {
+  background: lightsteelblue;
+  display: inline-block;
+  overflow: auto;
+  vertical-align: top;
+}
+
 .navigation {
   background: lightsteelblue;
 }
