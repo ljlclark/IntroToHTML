@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- PHPForIIS.html -->
+<html lang="en">
+<head>
+  <title>Configuring PHP</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+</head>
+<body>
+  <div class="page">
+    <h3 id="pageTitle">Configuring PHP</h3>
+    <ol>
+      <li>
+        Configure IIS
+        <p>
+          Control Panel | Programs | Turn Windows features on or off<br />
+          <br />
+          Check Internet Information Services<br />
+          Check IIS | World Wide Web Services | Application Development Features | CGI<br />
+          OK
+        </p>
+      </li>
+
+      <li>
+        Install the NTS (non-thread safe) 64-bit version of PHP
+        <p>
+          Download and save onto the machine:<br />
+          <br />
+          <a href="https://www.php.net/downloads.php">PHP</a><br />
+          <br />
+          Extract all the contents of the zip file to C:\PHP<br />
+          <br />
+          Now edit the System PATH variable so IIS knows where the PHP executables are:<br />
+          <br />
+          Control Panel | System and Security | System | Advanced System Settings<br />
+          Environment Variables<br />
+          System Variables | Path | Edit<br />
+          New -> C:\PHP
+        </p>
+      </li>
+
+      <li>
+        Configure the php.ini file. This is the part you’d never figure out without some help.
+        <p>
+          Make a copy of file C:\PHP\php.ini-development and save it as C:\PHP\php.ini<br />
+          <br />
+          Edit file php.ini by finding the following entries, uncomment them, and change values to:<br />
+          <br />
+          1. fastcgi.impersonate = 1<br />
+          2. cgi.fix_pathinfo = 0<br />
+          3. cgi.force_redirect = 0<br />
+          4. open_basedir = “C:\inetpub\wwwroot”<br />
+          5. extension_dir = “ext”<br />
+          6. error_log=”php_errors.log”<br />
+          7. uncomment the 24 Windows Extensions entries:<br />
+          <br />
+          extension=php_bz2.dll<br />
+          extension=php_curl.dll<br />
+          extension=php_fileinfo.dll<br />
+          extension=php_ftp.dll<br />
+          extension=php_gd2.dll<br />
+          extension=php_gettext.dll<br />
+          extension=php_gmp.dll<br />
+          extension=php_intl.dll<br />
+          extension=php_imap.dll<br />
+          extension=php_interbase.dll<br />
+          extension=php_ldap.dll<br />
+          extension=php_mbstring.dll<br />
+          extension=php_exif.dll<br />
+          extension=php_mysqli.dll<br />
+          extension=php_oci8_12c.dll<br />
+          extension=php_openssl.dll<br />
+          extension=php_pdo_firebird.dll<br />
+          extension=php_pdo_mysql.dll<br />
+          extension=php_pdo_oci.dll<br />
+          extension=php_pdo_odbc.dll<br />
+          extension=php_pdo_pgsql.dll<br />
+          extension=php_pdo_sqlite.dll<br />
+          extension=php_pgsql.dll<br />
+          extension=php_shmop.dll<br />
+          <br />
+          Save the edited php.ini file.<br />
+        </p>
+      </li>
+
+      <li>
+        Configure IIS to work with PHP
+        <p>
+          Run | inetmgr<br />
+          Handler Mappings | Add Module Mapping<br />
+          <br />
+          Request path: *.php<br />
+          Module: FastCgiModule (from the dropdown)<br />
+          Executable (optional): C:\PHP\php-cgi.exe<br />
+          Name: FastCGI<br />
+          <br />
+          OK (Yes)<br />
+        </p>
+      </li>
+
+      <li>
+        Test the installation and configuration
+        <p>
+          Launch Notepad with Administrative privleges.<br />
+          Create a file test.php and save it at C:\inetpub\wwwroot.<br />
+          <br />
+          Now launch a browser and navigate to<br />
+          <br />
+          http://localhost/test.php<br />
+        </p>
+      </li>
+    </ol>    <h6>PHPForIIS</h6>
+  </div>
+</body>
+</html>
