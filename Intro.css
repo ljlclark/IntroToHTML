@@ -2,6 +2,11 @@
 
 body {
   background: #F2F7FF;
+  font-size: 11pt;
+}
+
+pre {
+  font-size: 9pt;
 }
 
 .button {
