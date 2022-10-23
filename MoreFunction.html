@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- MoreFunction.html -->
+<html lang="en">
+<head>
+  <title>PHP Functions</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width =device-width initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="Intro.css" />
+  <script src="Intro.js"></script>
+</head>
+<body>
+  <div class="page">
+    <h3 id="pageTitle">PHP Functions</h3>
+    <p>
+      A PHP function is a group of code that can be called by name.
+    </p>
+    <p>
+      A PHP function can have values passed to it. In the function definition
+      these values are called parameters. The function parameters are located
+      between the function parentheses.
+    </p>
+    <p>
+      Function parameters can have a required data type. 
+    </p>
+    <p>
+      A function can also have a required return type. The return type is
+      separated from the function parameters by a colon.
+    </p>
+    <pre>
+    &lt;?php
+      declare(strict_types=1);
+
+      // Encode to HTML entities.
+      function Display(string $text) : string
+      {
+        $retValue = htmlspecialchars($text);
+        return $retValue;
+      }
+    ?&gt;</pre>
+    <h6>MoreFunction</h6>
+  </div>
+</body>
+</html>
