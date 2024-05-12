@@ -5,53 +5,77 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Intro to HTML5 Tutorial</title>
-  <meta name='author' content='Lester J. Clark' />
   <meta charset='utf-8' />
-  <meta name="keywords" content="LJC, HTML, Tutorial, Simple">
+  <meta name="keywords" content="LJC, HTML, Tutorial, Simple GitHub">
+  <meta name='author' content='Lester J. Clark' />
   <meta name='viewport' content='width=device-width initial-scale=1' />
-  <link rel='stylesheet' type='text/css' href='Intro.css' />
-  <style>
-    .banner {
-      background: #1798B7;
-      height: 60px;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="CSS/Sidebar.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/Intro.css" />
+  <script src="Script/NavEvents.js"></script>
 </head>
 <body>
-  <div class="page">
-    <h3 class="banner"><br />Simple and Brief</h3>
-    <h3 id="title" style="text-align: center">Intro to HTML5 Tutorial</h3>
-    <p style="text-align: center">
-      <a href="0Overview.html">Overview</a><br />
-      <a href="1Definition.html">What is HTML?</a><br />
-      <a href="2Document.html">What is an HTML Document?</a><br />
-      <a href="3WebPage.html">What is a Web page?</a><br />
-      <a href="4Element.html">What is an HTML Element?</a><br />
-      <a href="5Tag.html">What is an HTML Tag?</a><br />
-      <a href="6DocumentTag.html">The Document Element</a><br />
-      <a href="7BodyTag.html">The Body Element</a><br />
-      <a href="8ParagraphTag.html">The Paragraph Element</a><br />
-      <a href="9Entity.html">What is an HTML Entity.</a><br />
-      <a href="10LineBreak.html">The Line Break Element</a><br />
-      <a href="11PreTag.html">The Preformatted Element</a><br />
-      <a href="12HeadTag.html">The Head Element</a><br />
-      <a href="13Comment.html">The HTML Comment</a><br />
-      <a href="14AnchorTag.html">The Anchor Element</a><br />
-      <a href="15HeadingTags.html">The Heading Elements</a><br />
-      <a href="16ImgTag.html">The Image Element</a><br />
-      <a href="17StrongTag.html">The Strong Element</a><br />
-      <a href="18LayoutTypes.html">The Display Types</a><br />
-      <a href="19DivTag.html">The Division Element</a><br />
-      <a href="20SpanTag.html">The Span Element</a><br />
-    </p>
-    <h3 style="background: lightsteelblue; text-align: center">Other Simple and Brief Tutorials</h3>
-    <p style="text-align: center">
-      <a href="https://ljlclark.github.io/IntroToCSS/">Intro to CSS Tutorial</a><br />
-      <a href="https://ljlclark.github.io/IntroToJavascript/">Intro to Javascript Tutorial</a><br />
-      <a href="https://ljlclark.github.io/IntroToPHP/">Intro to PHP Tutorial</a><br />
-    </p>
-    <h6>index</h6>
+  <!-- Show/Hide Menu Icon -->
+  <span id="menubar"><img id="menuIco" src="AppManager.ico" /></span>
+  <div id="sidebar">
+    <br />
+    <div class="navItem"
+         data-href="HtMLMain.html">Home</div>
+    <div class="navItem"
+         data-href="HTML\0Overview.html">Overview</div>
+    <div class="navItem"
+         data-href="HTML\1Definition.html">What is HTML?</div>
+    <div class="navItem"
+         data-href="HTML\2Document.html">What is an HTML Document?</div>
+    <div class="navItem"
+         data-href="HTML\3WebPage.html">What is a Web page?</div>
+    <div class="navItem"
+         data-href="HTML\4Element.html">What is an HTML Element?</div>
+    <div class="navItem"
+         data-href="HTML\5Tag.html">What is an HTML Tag?</div>
+    <div class="navItem"
+         data-href="HTML\6DocumentTag.html">The Document Element</div>
+    <div class="navItem"
+         data-href="HTML\7BodyTag.html">The Body Element</div>
+    <div class="navItem"
+         data-href="HTML\8ParagraphTag.html">The Paragraph Element</div>
+    <div class="navItem"
+         data-href="HTML\9Entity.html">What is an HTML Entity?</div>
+
+    <div class="navItem"
+         data-href="HTML\10LineBreak.html">The Line Break Element</div>
+    <div class="navItem"
+         data-href="HTML\11PreTag.html">The Preformatted Element</div>
+    <div class="navItem"
+         data-href="HTML\12HeadTag.html">The Head Element</div>
+    <div class="navItem"
+         data-href="HTML\13Comment.html">The HTML Comment</div>
+    <div class="navItem"
+         data-href="HTML\14AnchorTag.html">The Anchor Element</div>
+    <div class="navItem"
+         data-href="HTML\15HeadingTags.html">The Heading Elements</div>
+    <div class="navItem"
+         data-href="HTML\16ImgTag.html">The Image Element</div>
+    <div class="navItem"
+         data-href="HTML\17StrongTag.html">The Strong Element</div>
+    <div class="navItem"
+         data-href="HTML\18LayoutTypes.html">The Display Types</div>
+    <div class="navItem"
+         data-href="HTML\19DivTag.html">The Division Element</div>
+    <div class="navItem"
+         data-href="HTML\20SpanTag.html">The Span Element</div>
+    <br />
+    <div class="smallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
   </div>
+  <div id="content">
+    <iframe id="contentFrame" src="HTMLMain.html"></iframe>
+  </div>
+  <script>
+    const contentFrame = document.getElementById("contentFrame");
+    const navEvents = new CSSNavEvents(contentFrame);
+    navEvents.AddEvents();
+  </script>
 </body>
 </html>

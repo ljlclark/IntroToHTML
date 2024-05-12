@@ -1,0 +1,77 @@
+/* SideBar.css */
+
+/* Type Selectors */
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+/* Nav text Class Selectors */
+.navGroup {
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.navLiveGroup {
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.navSubGroup {
+  font-size: 16px;
+  margin-left: 14px;
+  margin-top: 5px;
+}
+
+.navItem {
+  margin-left: 24px;
+}
+
+  .navLiveGroup:hover, .navItem:hover {
+    background-color: aliceblue;
+  }
+
+/* Sidebar Class Selectors */
+.smallText {
+  font-family: Arial;
+  font-size: 6pt;
+  padding-left: 15px;
+}
+
+/* Sidebar ID Selectors */
+#content {
+  height: 100%;
+  overflow: hidden;
+  width: 80%;
+}
+
+#contentFrame {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+#menuIco {
+  display: none;
+  height: 23px;
+  width: 23px;
+}
+
+#menubar {
+  display: none;
+  height: 21px;
+}
+
+#sidebar {
+  background-color: lightsteelblue;
+  float: left;
+  height: 100%;
+  overflow: auto;
+  width: 20%;
+}

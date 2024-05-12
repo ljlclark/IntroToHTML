@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- 4Element.html -->
+<html lang="en">
+<head>
+  <title>HTML Element</title>
+  <meta name="author" content="Lester J. Clark" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <link rel='stylesheet' type='text/css' href='..\CSS\Intro.css' />
+  <script src="..\Script\Intro.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="PathText">
+      HTML: / <a id="home" href="..\HTMLMain.html">Home</a>
+      / Element
+    </div>
+    <h3 id="pageTitle">What is an HTML Element?</h3>
+    <p>
+      An HTML Element is an HTML Document section that starts with a Begin Tag
+      and stops with an End Tag. HTML Elements describe the
+      <a href="Content.html">structure and content</a> of the document.
+    </p>
+    <pre>
+    &lt;p&gt;This is a paragraph element.&lt;/p&gt;</pre>
+    <p>
+      An HTML Element can contain other HTML Elements.
+    </p>
+    <p>
+      An HTML Elements text will not display keyboard entered line breaks,
+      spaces or tabs. The browser will allow one space for a keyboard entered
+      line break. This allows the browser to supply automatic word wrap when the
+      browser window is resized.
+    </p>
+    <a href="4ElementMore.html">More Information</a><br />
+    <br />
+    More about <a href="MoreFileSystem.html">Files</a><br />
+    <br />
+    <a href="3WebPage.html" class="button">&lt;- WebPage</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="5Tag.html" class="button">HTMLTags -&gt;</a>
+    <h6>4Element</h6>
+  </div>
+  <script>
+    const isLocal = localStorage.getItem("isLocal");
+    if (isLocal == "local")
+    {
+      home.href = "indexLocal.html";
+    }
+  </script>
+</body>
+</html>
