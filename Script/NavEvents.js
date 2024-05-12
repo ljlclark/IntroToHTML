@@ -1,7 +1,7 @@
 "use strict";
-// CSSNavEvents.js
+// NavEvents.js
 
-class CSSNavEvents
+class NavEvents
 {
   // Initializes an object instance with the provided values.
   constructor(contentFrame)
