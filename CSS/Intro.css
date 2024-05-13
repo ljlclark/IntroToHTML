@@ -24,6 +24,10 @@ pre {
   vertical-align: top;
 }
 
+.link {
+  cursor: pointer;
+}
+
 .navigation {
   background: lightsteelblue;
 }
