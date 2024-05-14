@@ -1,0 +1,15 @@
+/* HMenu.css*/
+
+.hMenu {
+  background-color: lightsteelblue;
+  padding: 8px;
+}
+
+.hItem {
+  cursor: pointer;
+  padding: 8px;
+}
+
+  .hItem:hover {
+    background-color: aliceblue;
+  }
