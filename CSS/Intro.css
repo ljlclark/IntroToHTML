@@ -9,6 +9,13 @@ pre {
   font-size: 9pt;
 }
 
+.banner {
+  background-color: #27a8c7;
+  height: 60px;
+  text-align: center;
+}
+
+
 .button {
   display: inline-block;
   background: lightsteelblue;
@@ -43,6 +50,12 @@ pre {
   font-size: 9pt;
   padding-left: 10px;
   padding-top: 5px;
+}
+
+.picture {
+  background: #27a8c7;
+  height: auto;
+  max-width: 100%;
 }
 
 .button:hover {
