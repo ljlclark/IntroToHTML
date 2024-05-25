@@ -10,9 +10,13 @@ pre {
 }
 
 .banner {
+  display: inline-block;
   background-color: #27a8c7;
-  height: 60px;
+  font-size: 12pt;
+  height: 30px;
+  padding-top: 8px;
   text-align: center;
+  width: 100%;
 }
 
 
