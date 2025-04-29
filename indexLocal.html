@@ -18,51 +18,50 @@
   <span id="menubar"><img id="menuIco" src="AppManager.ico" /></span>
   <div id="sidebar">
     <br />
-    <div class="navGroup"">HTML</div>
-    <div class="navItem"
+    <div class="navGroup" ">HTML</div>
+    <div id="home" class="navItem"
          data-href="HTMLMain.html">Home</div>
-    <div class="navItem"
+    <div id="overview" class="navItem"
          data-href="HTML\0Overview.html">Overview</div>
-    <div class="navItem"
+    <div id="html" class="navItem"
          data-href="HTML\1Definition.html">What is HTML?</div>
-    <div class="navItem"
+    <div id="document" class="navItem"
          data-href="HTML\2Document.html">What is an HTML Document?</div>
-    <div class="navItem"
+    <div id="page" class="navItem"
          data-href="HTML\3WebPage.html">What is a Web page?</div>
-    <div class="navItem"
+    <div id="element" class="navItem"
          data-href="HTML\4Element.html">What is an HTML Element?</div>
-    <div class="navItem"
+    <div id="tag" class="navItem"
          data-href="HTML\5Tag.html">What is an HTML Tag?</div>
-    <div class="navItem"
+    <div id="docElement" class="navItem"
          data-href="HTML\6DocumentTag.html">The Document Element</div>
-    <div class="navItem"
+    <div id="body" class="navItem"
          data-href="HTML\7BodyTag.html">The Body Element</div>
-    <div class="navItem"
+    <div id="paragraph" class="navItem"
          data-href="HTML\8ParagraphTag.html">The Paragraph Element</div>
-    <div class="navItem"
+    <div id="entity" class="navItem"
          data-href="HTML\9Entity.html">What is an HTML Entity?</div>
-
-    <div class="navItem"
+    <div id="br" class="navItem"
          data-href="HTML\10LineBreak.html">The Line Break Element</div>
-    <div class="navItem"
+    <div id="pre" class="navItem"
          data-href="HTML\11PreTag.html">The Preformatted Element</div>
-    <div class="navItem"
+    <div id="head" class="navItem"
          data-href="HTML\12HeadTag.html">The Head Element</div>
-    <div class="navItem"
+    <div id="comment" class="navItem"
          data-href="HTML\13Comment.html">The HTML Comment</div>
-    <div class="navItem"
+    <div id="anchor" class="navItem"
          data-href="HTML\14AnchorTag.html">The Anchor Element</div>
-    <div class="navItem"
+    <div id="heading" class="navItem"
          data-href="HTML\15HeadingTags.html">The Heading Elements</div>
-    <div class="navItem"
+    <div id="image" class="navItem"
          data-href="HTML\16ImgTag.html">The Image Element</div>
-    <div class="navItem"
+    <div id="strong" class="navItem"
          data-href="HTML\17StrongTag.html">The Strong Element</div>
-    <div class="navItem"
+    <div id="types" class="navItem"
          data-href="HTML\18LayoutTypes.html">The Display Types</div>
-    <div class="navItem"
+    <div id="div" class="navItem"
          data-href="HTML\19DivTag.html">The Division Element</div>
-    <div class="navItem"
+    <div id="span" class="navItem"
          data-href="HTML\20SpanTag.html">The Span Element</div>
     <br />
     <div class="smallText">
@@ -78,6 +77,24 @@
     const contentFrame = document.getElementById("contentFrame");
     const navEvents = new NavEvents(contentFrame);
     navEvents.AddEvents();
+
+    // Handle message.
+    window.addEventListener('message', function (event)
+    {
+      if (event.origin == window.origin)
+      {
+        if (navEvents.PrevNavItem != null)
+        {
+          // Resets to original value.
+          navEvents.PrevNavItem.style.backgroundColor = "";
+        }
+
+        // Get data from message.
+        let eItem = document.getElementById(event.data)
+        navEvents.PrevNavItem = eItem;
+        eItem.style.backgroundColor = "#d4dfff";
+      }
+    });
   </script>
 </body>
 </html>
