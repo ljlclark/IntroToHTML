@@ -51,5 +51,14 @@
     <a href="13Comment.html" class="button">Comment -&gt;</a>
     <h6>12headTag</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("head", origin);
+    });
+  </script>
 </body>
 </html>

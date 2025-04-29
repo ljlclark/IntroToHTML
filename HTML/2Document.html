@@ -40,5 +40,14 @@
     <a href="3WebPage.html" class="button">WebPage -&gt;</a>
     <h6>2Document</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("document", origin);
+    });
+  </script>
 </body>
 </html>

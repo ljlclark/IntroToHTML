@@ -54,5 +54,14 @@
     <a href="19DivTag.html" class="button">Division -&gt;</a>
     <h6>18LayoutTypes</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("types", origin);
+    });
+  </script>
 </body>
 </html>

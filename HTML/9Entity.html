@@ -49,5 +49,14 @@
     <a href="10LineBreak.html" class="button">LineBreak -&gt;</a>
     <h6>9Entity</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("entity", origin);
+    });
+  </script>
 </body>
 </html>

@@ -44,5 +44,14 @@
     <a href="12HeadTag.html" class="button">Head -&gt;</a>
     <h6>11PreTag</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("pre", origin);
+    });
+  </script>
 </body>
 </html>

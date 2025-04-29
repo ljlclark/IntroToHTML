@@ -43,5 +43,14 @@
     <a href="18LayoutTypes.html" class="button">DisplayTypes -&gt;</a>
     <h6>17StrongTag</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("strong", origin);
+    });
+  </script>
 </body>
 </html>

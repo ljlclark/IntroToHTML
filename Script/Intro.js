@@ -8,3 +8,12 @@ function LJCIsLocal()
     home.href = "indexLocal.html";
   }
 }
+
+function GetOrigin(origin)
+{
+  if ("null" == origin)
+  {
+    origin = "*";
+  }
+  return origin;
+}

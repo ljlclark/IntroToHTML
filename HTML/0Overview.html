@@ -9,6 +9,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <link rel='stylesheet' type='text/css' href='..\CSS\Intro.css' />
+  <script src="..\Script\Intro.js"></script>
 </head>
 <body>
   <div class="page">
@@ -108,5 +109,14 @@
     </ol>
     <h6>Overview</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("overview", origin);
+    });
+  </script>
 </body>
 </html>

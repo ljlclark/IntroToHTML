@@ -56,5 +56,14 @@
     <a href="7BodyTag.html" class="button">Body -&gt;</a>
     <h6>6DocumentTag</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("docElement", origin);
+    });
+  </script>
 </body>
 </html>

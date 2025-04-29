@@ -44,5 +44,14 @@
     <a href="9Entity.html" class="button">Entities -&gt;</a>
     <h6>8ParagraphTag</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("paragraph", origin);
+    });
+  </script>
 </body>
 </html>

@@ -47,5 +47,14 @@
     <a href="11PreTag.html" class="button">Preformatted -&gt;</a>
     <h6>10LineBreak</h6>
   </div>
+  <script>
+    window.addEventListener("load", function (event)
+    {
+      // Send a message to index.html.
+      let indexWindow = parent.parent;
+      let origin = GetOrigin(window.origin);
+      indexWindow.postMessage("br", origin);
+    });
+  </script>
 </body>
 </html>
