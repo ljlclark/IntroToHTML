@@ -1,7 +1,12 @@
 /* Intro.css */
+/* Intro Tutorials */
 
+/* Element Selectors */
+/*********************/
+
+/* #f2f7ff is lighter than aliceblue: #f0f8ff */
 body {
-  background: #F2F7FF;
+  background: #f2f7ff;
   font-size: 11pt;
 }
 
@@ -9,6 +14,12 @@ pre {
   font-size: 9pt;
 }
 
+/* Class Selectors */
+/*******************/
+
+/* The banner or header at the top of the main page */
+/* <br /><span id="banner">Banner</span><br /> */
+/* <div id="banner" class="banner">Simple and Brief</div> */
 .banner {
   display: inline-block;
   background-color: #27a8c7;
@@ -19,7 +30,8 @@ pre {
   width: 100%;
 }
 
-
+/* Make an inline element look more like a button. */
+/* <a href="2StyleAttribute.html" class="button" > StyleAttribute -&gt;</a > */
 .button {
   display: inline-block;
   background: lightsteelblue;
@@ -28,6 +40,8 @@ pre {
   text-decoration: none;
 }
 
+/* Makes divs act like span. */
+/* <div class="demo">Line1<br />Line2</div> */
 .demo {
   background: lightsteelblue;
   display: inline-block;
@@ -39,15 +53,22 @@ pre {
   cursor: pointer;
 }
 
+/* Demonstrate element background. */
 .navigation {
   background: lightsteelblue;
 }
 
+/* Top-level div to style page. */
+/* <div class="page"> */
 .page {
   margin-left: 15px;
   margin-right: 10px;
 }
 
+/* Navigation pathbar. */
+/* CSS: / <a href="">Home</a> */
+/* / <a href="parent.html">ParentName</a> */
+/* / PageName */
 .PathText {
   color: #003399;
   font-family: Verdana, Tahoma, Arial, Sans-Serif;
@@ -56,16 +77,26 @@ pre {
   padding-top: 5px;
 }
 
+/* Style an full-width image. */
+/* <img class="picture" src="Pic.jpg" /> */
 .picture {
   background: #27a8c7;
   height: auto;
   max-width: 100%;
 }
 
+/* Pseudo-classes */
+/******************/
+
 .button:hover {
   background-color: #85C1E9;
 }
 
+/* ID Selectors */
+/****************/
+
+/* Highlight a block element. */
+/* <h3>Page Heading</h3> */
 #pageTitle {
   background: lightsteelblue;
 }
